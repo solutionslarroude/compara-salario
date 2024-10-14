@@ -31,6 +31,7 @@ def process_text_to_dataframe(text):
             value = value.replace('.', '').replace(',', '.')  # Converte valor para float
             data.append([id_, name.strip(), float(value)])
 
+    # Criar DataFrame com as colunas filtradas (ID, Name e Value)
     df = pd.DataFrame(data, columns=['ID', 'Name', 'Value'])
     return df
 
